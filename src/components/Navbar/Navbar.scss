@@ -1,0 +1,60 @@
+.info{
+  padding-top: 30px;
+  width: 95%;
+}
+
+.info__title{
+  font-size: 24px;
+  font-family: 'Bluu Next';
+  font-weight: 700;
+  color: #072D4B;
+  margin-bottom: 16px;
+}
+
+.info__list{
+  margin-bottom: 24px;
+  
+  button{
+    border: none;
+    background-color: #fff;
+    padding: 6px 16px;
+    border: 0.2px solid #fff;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+
+    &:hover{
+      background-color: #2f9ff8;
+      color: #fff;
+    }
+  }
+}
+
+.slick-arrow{
+  background-color: #2F9FF8 !important;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  position: relative;
+  font-size: 0 !important;
+  z-index: 22;
+  padding: 12px !important;
+
+  &::before{
+    font-size: 13px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: transparent !important;
+  }
+}
+
+.slick-prev{
+  left: 0px !important;
+}
+
+.slick-next{
+  right: 0px !important;
+}

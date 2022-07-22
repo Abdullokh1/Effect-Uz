@@ -1,0 +1,30 @@
+.faq{
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 25px;
+}
+
+.faq__title{
+  border-bottom: 0.2px solid #072e4b50;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.faq__time{
+  color: #6A8193;
+  font-size: 12px;
+}
+
+.faq__list{
+  li{
+    &:not(:last-child){
+      margin-bottom: 10px;
+      border-bottom: 0.2px solid #072e4b50;
+    }
+   
+    p{
+      font-size: 13px;
+    }
+  }
+}

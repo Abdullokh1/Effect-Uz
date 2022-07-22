@@ -1,0 +1,158 @@
+.aside{
+  width: 285px;
+  position: relative;
+  right: 52px;
+}
+
+.aside__list{
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  li{
+    width: 40px;
+    height: 40px;
+    background: #D9D9D9;
+    border-radius: 5px;
+  }
+}
+
+.aside__weather{
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  h5{
+    font-size: 15px;
+    color: #072D4B;
+    font-weight: 400;
+    flex-grow: 1;
+  }
+
+  button{
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #d5ecfe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(3){
+      background-color: #2F9FF8;
+      margin-left: 10px;
+    }
+  }
+
+  p{
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  span{
+    font-size: 26px;
+    font-weight: 700;
+    color: #072d4b;
+  }
+}
+
+.aside__inner{
+  border-bottom: 1px solid #072e4b30;
+  padding-bottom: 8px;
+}
+
+.aside__temp{
+  position: relative;
+  &::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #072d4b;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -7px;
+  }
+}
+
+.aside__info{
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  margin-bottom: 20px;
+
+  span{
+    font-size: 15px;
+  }
+
+  p{
+    font-size: 13px;
+    color: #6A8193;
+  }
+
+  button{
+    border: none;
+    background-color: transparent;
+    padding: 10px 25px;
+    background: #fff;
+    border: 0.2px solid #2F9FF8;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    &:hover{
+      background-color: #2F9FF8;
+      color: #fff;
+    }
+  }
+}
+
+.aside__advert{
+  width: 100%;
+  padding: 20px;
+  background: #2f9ff8;
+  border-radius: 4px;
+
+  p{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  span{
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: -8px;
+  }
+
+  button{
+    margin-left: 20px;
+    background: #0768B5;
+    border-radius: 4px;
+    padding: 10px 27px;
+    color: #fff;
+    transition: all 0.3s ease;
+
+    &:hover{
+      background-color: #072D4B;
+    }
+  }
+}
+
+.aside__advert-inner{
+  h5{
+    font-size: 15px;
+    color: #fff;
+    margin-left: 8px;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
+}

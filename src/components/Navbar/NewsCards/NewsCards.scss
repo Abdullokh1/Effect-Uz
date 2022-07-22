@@ -1,0 +1,71 @@
+.news-cards{
+
+}
+
+.news-cards__list{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+
+  li{
+    width: 100%;
+    height: 154px;
+    background: #fff;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    position: relative;
+    padding: 10px 8px 12px 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover{
+
+      h5{
+        color: #0768B5;
+      }
+      box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h5{
+      font-size: 17px;
+      line-height: 24px;
+      transition: all 0.3s ease;
+    }
+
+    p{
+      position: absolute;
+      top: 40%;
+      left: -27px;
+      transform: translateY(-50%);
+      transform: rotate(-90deg);
+      background: rgba(217, 217, 217, 0.15);
+      color: #6A8193;
+      border-radius: 0px 6px 6px 0px;
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+.news-cards__time{
+  color: #6A8193;
+  font-size: 14px;
+}
+
+.news-cards__btn{
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  border: 2px solid #072d4b;
+  border-radius: 4px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+
+  &:hover{
+    background-color: #2f9ff8;
+    color: #fff;
+    border-color: #2f9ff8;
+  }
+}
