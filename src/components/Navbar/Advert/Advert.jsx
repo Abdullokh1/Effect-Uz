@@ -3,6 +3,7 @@ import './Advert.scss'
 import gift from '../../../assets/images/gift.svg'
 
 function Advert() {
+
   return (
     <div className='advert'>
       <div className='advert__inner d-flex align-items-center'>

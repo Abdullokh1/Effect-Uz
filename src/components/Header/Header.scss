@@ -71,12 +71,16 @@ header{
     border-radius: 4px;
     background: rgba(47, 159, 248, 0.04);
     padding: 14px 25px;
+    cursor: pointer;
+    padding-right: 20px;
     
     &:focus{
       outline: none;
     }
   }
 }
+
+
 
 .header__settings-wrapper{
   background: rgba(47, 159, 248, 0.04);

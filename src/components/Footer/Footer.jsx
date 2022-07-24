@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom'
 import footerLogo from '../../assets/images/footer-logo.svg'
 import footerGoogle from '../../assets/images/footer-google.svg'
 import footerApple from '../../assets/images/footer-apple.svg'
+import {useTranslation} from "react-i18next";
 
 
 function Footer() {
+  const {t} = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -17,22 +20,22 @@ function Footer() {
           <div className="left-footer">
             <ul className="left-footer-ul">
               <div>
-                <h4>Foydali sahifalar</h4>
-                <li><a href="#">Yangiliklar lentasi</a></li>
-                <li><a href="#">Foto-yangiliklar</a></li>
-                <li><a href="#">Video-yangiliklar</a></li>
+                <h4>{t('Полезные страницы')}</h4>
+                <li><a href="#">{t('Новости')}</a></li>
+                <li><a href="#">{t('Фото новости')}</a></li>
+                <li><a href="#">{t('Видео новости')}</a></li>
                 <li><a href="#">Content</a></li>
                 <li><a href="#">Integrations</a></li>
               </div>
               <div>
-                <h4>Ruknlar</h4>
+                <h4>{t('Cтолбцы')}</h4>
                 <li><a href="#">Siyosat</a></li>
                 <li><a href="#">Texnologiya</a></li>
                 <li><a href="#">Sport</a></li>
                 <li><a href="#">Website Builder</a></li>
               </div>
               <div>
-                <h4>Hududlar</h4>
+                <h4>{t('Регионы')}</h4>
                 <li><a href="#">Toshkent</a></li>
                 <li><a href="#">Samarqand</a></li>
                 <li><a href="#">Qashqadaryo</a></li>
@@ -41,7 +44,7 @@ function Footer() {
                 <li><a href="#">Support</a></li>
               </div>
               <div>
-                <h4>Biz haqimizda</h4>
+                <h4>{t('Насчет нас')}</h4>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Careers</a></li>
                 <li><a href="#">Ko’p so’raladigan savollar</a></li>
@@ -50,16 +53,7 @@ function Footer() {
               </div>
             </ul>
             <p>
-              «EFFECT.UZ» интернет-нашри 2019 йилнинг 1 ноябрь куни электрон ОAВ
-              сифатида Ўзбекистон Республикаси Президенти Aдминстрацияси
-              ҳузуридаги Aхборот ва оммавий коммуникациялар агентлигида
-              рўйхатдан ўтказилган. Гувоҳнома рақами: 1323. Муассис:
-              «EFFECTUZBEK» МЧЖ Сайт раҳбари: Aкмалхон Эшонхонов Электрон
-              манзил: www.effect.uz@gmail.com Таҳририят манзили: 100016, Тошкент
-              шаҳри, Яшнобод тумани, Маҳтумқули кўчаси 26-уй. EFFECT.UZ сайтида
-              эълон қилинган материаллардан нусха кўчириш, тарқатиш ва бошқа
-              шаклларда фойдаланиш фақат таҳририят раҳбариятининг ёзма розилиги
-              билан амалга оширилади.
+              {t('1 ноября 2019 года интернет-издание «EFFECT.UZ» зарегистрировано в качестве электронного средства массовой информации в Агентстве информации и массовых коммуникаций при Администрации Президента Республики Узбекистан. Номер сертификата: 1323. Учредитель: ООО «ЭФФЕКТУЗБЕК» Руководитель сайта: Акмалхан Эшонханов Электронный адрес: www.effect.uz@gmail.com Адрес редакции: 100016, г.Ташкент, Яшнабадский район, улица Махтумкули 26. Копирование, распространение и иные формы использования материалов, опубликованных на сайте EFFECT.UZ, осуществляются только с письменного согласия редакции.')}
             </p>
           </div>
           <div className="right-footer">

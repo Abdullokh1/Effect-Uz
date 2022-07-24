@@ -5,36 +5,21 @@ import './Navbar.scss'
 import NewsCards from './NewsCards/NewsCards'
 import PhotoNews from './PhotoNews/PhotoNews'
 import VideoNews from './VideoNews/VideoNews'
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick';
+import {useTranslation} from "react-i18next";
+import Categories from './Categories/Categories'
+
+
 
 function Navbar() {
-  const categories = ['Barchasi', 'Texnika', 'Siyosat', 'Jamiyat', 'Sport', 'Iqtisod', 'Ilm-fan', 'Turizm']
-  const settings = {
-    infinite: true,
-    slidesToScroll: 1,
-    slidesToShow: 7,
-    speed: 500,
-    autoplay: true,
-  }
+  const {t} = useTranslation();
+
 
   return (
 
     <section className='info'>
-      <h2 className='info__title'>So’nggi Yangiliklar</h2>
-      <ul className='info__list'>
-        <Slider {...settings}>
-          {categories.map((item, i) =>{
-            return (
-              <li key={i}>
-                <button>{item}</button>
-              </li>
-            )
-          })}
-        </Slider>
-      </ul>
+      <h2 className='info__title'>{t('Последние новости')}</h2>
 
+      <Categories/>
       <InfoCards/>
       <Advert/>
       <NewsCards/>

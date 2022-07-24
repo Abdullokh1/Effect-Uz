@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.scss";
 import logo from "../../assets/images/logo.svg";
 import down from "../../assets/images/down.svg";
@@ -7,10 +7,23 @@ import sun from "../../assets/images/sun.svg";
 import moon from "../../assets/images/moon.svg";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import '../../i18'
+import {useTranslation} from "react-i18next";
 
 
 function Header() {
+  const {i18n} = useTranslation();
   let [isDark, setIsDark] = useState(false);
+  let [lang, setLang] = useState('')
+
+  useEffect(() =>{
+    switch(lang){
+      case 'uz':
+        i18n.changeLanguage(lang)
+      case 'ru':
+        i18n.changeLanguage(lang)
+    }
+  }, [lang])
 
   return (
     <header className="header">
@@ -69,10 +82,9 @@ function Header() {
               <img src={moon} alt="moon" />
             </button>
           </div>
-          <select>
-            <option value="uzb">O'zbek</option>
-            <option value="eng">English</option>
-            <option value="rus">Russian</option>
+          <select onChange={(e) => setLang(e.target.value)}>
+            <option value="uz">O'zbek</option>
+            <option value="ru">Русский</option>
           </select>
         </div>
       </div>

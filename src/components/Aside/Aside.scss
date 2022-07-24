@@ -90,7 +90,7 @@
   margin-bottom: 20px;
 
   span{
-    font-size: 15px;
+    font-size: 14px;
   }
 
   p{
@@ -101,11 +101,12 @@
   button{
     border: none;
     background-color: transparent;
-    padding: 10px 25px;
+    padding: 10px 15px;
     background: #fff;
     border: 0.2px solid #2F9FF8;
     border-radius: 4px;
     transition: all 0.3s ease;
+    margin-left: 5px;
 
     &:hover{
       background-color: #2F9FF8;

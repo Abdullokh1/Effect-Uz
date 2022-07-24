@@ -1,8 +1,10 @@
 import './Sidebar.scss'
 import { NavLink } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 
 function Sidebar() {
+  const {t} = useTranslation();
 
   return (
     <section className='sidebar'>
@@ -13,11 +15,10 @@ function Sidebar() {
             <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
             <path d="M9 22V12H15V22" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-
-            <h4>Bosh sahifa</h4>
+            <h4>{t('Главный')}</h4>
           </li>
         </NavLink>
-        <NavLink className={({isActive}) => isActive ? 'active-link' : 'static-link'} to='sdf'>
+        <NavLink className={({isActive}) => isActive ? 'active-link' : 'static-link'} to='/News'>
           <li>
             <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9 6H20" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
@@ -27,10 +28,9 @@ function Sidebar() {
               <path d="M5 12V12.01" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
               <path d="M5 18V18.01" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <h4>Yangiliklar lentasi</h4>
+            <h4>{t('Новости')}</h4>
           </li>
         </NavLink>
-        <NavLink className={({isActive}) => isActive ? 'active-link' : 'static-link'} to='nnn'>
           <li>
             <div className="accordion" id="accordionExample">
               <div className="accordion-item">
@@ -42,7 +42,7 @@ function Sidebar() {
                     <path d="M9 14H5C4.44772 14 4 14.4477 4 15V19C4 19.5523 4.44772 20 5 20H9C9.55228 20 10 19.5523 10 19V15C10 14.4477 9.55228 14 9 14Z" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M14 17H20M17 14V20" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                    Ruknlar
+                    {t('Cтолбцы')}
                   </button>
                 </h2>
                 <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -57,7 +57,6 @@ function Sidebar() {
               </div>
            </div>
           </li>
-        </NavLink>
         <NavLink className={({isActive}) => isActive ? 'active-link' : 'static-link'} to='qqq'>
           <li>
             <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +65,7 @@ function Sidebar() {
               <path d="M8 21H16" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
               <path d="M12 17V21" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <h4>Audio xabarlar</h4>
+            <h4>{t('Звуковые')}</h4>
           </li>
         </NavLink>
         <NavLink className={({isActive}) => isActive ? 'active-link' : 'static-link'} to='www'>
@@ -75,18 +74,16 @@ function Sidebar() {
               <path d="M15 10L19.553 7.724C19.7054 7.64783 19.8748 7.61188 20.045 7.61954C20.2152 7.62721 20.3806 7.67824 20.5256 7.7678C20.6706 7.85736 20.7902 7.98247 20.8733 8.13127C20.9563 8.28006 20.9999 8.44761 21 8.618V15.382C20.9999 15.5524 20.9563 15.7199 20.8733 15.8687C20.7902 16.0175 20.6706 16.1426 20.5256 16.2322C20.3806 16.3218 20.2152 16.3728 20.045 16.3805C19.8748 16.3881 19.7054 16.3522 19.553 16.276L15 14V10Z" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
               <path d="M13 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H13C14.1046 18 15 17.1046 15 16V8C15 6.89543 14.1046 6 13 6Z" stroke strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-
-            <h4>Video xabarlar</h4>
+            <h4>{t('Видео сообщения')}</h4>
           </li>
         </NavLink>
-        <NavLink className={({isActive}) => isActive ? 'active-link' : 'static-link'} to='eee'>
           <li>
             <div className="accordion" id="accordionExample2">
               <div className="accordion-item">
                 <h2 className="accordion-header" id="headingOne">
                   <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
                   <i className='bx bx-globe' ></i>
-                    Hududlar
+                    {t('Регионы')}
                   </button>
                 </h2>
                 <div id="collapseOne2" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
@@ -102,7 +99,6 @@ function Sidebar() {
               </div>
            </div>
           </li>
-        </NavLink>
       </ul>
     </section>
   )

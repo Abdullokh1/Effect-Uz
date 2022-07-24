@@ -1,16 +1,18 @@
 import React from 'react'
 import './PhotoNews.scss'
-import photoNews1 from '../../../assets/images/photo-news-1.png'
 import photoNews2 from '../../../assets/images/photo-news-2.png'
 import photoNews3 from '../../../assets/images/photo-news-3.png'
+import {useTranslation} from "react-i18next";
 
 
 function PhotoNews() {
+  const {t} = useTranslation();
+
   return (
     <div className='photo-news'>
       <div className='d-flex align-items-center justify-content-between mb-4'>
-        <h4>Foto-yangiliklar</h4>
-        <button className='news-cards__btn m-0'>Bo‘limga o‘tish</button>
+        <h4>{t('Фото новости')}</h4>
+        <button className='news-cards__btn m-0'>{t('Перейти в раздел')}</button>
       </div>
 
       <ul className='photo-news__list photos'>

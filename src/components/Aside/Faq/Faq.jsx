@@ -2,15 +2,17 @@ import React from 'react'
 import './Faq.scss'
 import file from '../../../assets/images/file.svg'
 import calendar from '../../../assets/images/calendar.svg'
+import {useTranslation} from "react-i18next";
 
 
 function Faq() {
+  const {t} = useTranslation();
   const faq = ['','','','','','']
   return (
     <div className='faq'>
       <div className='faq__title'>
         <img className='me-2' src={file} alt="file"/>
-        <span>Eng ko‘p o‘qilgan</span>
+        <span>{t('Самые читаемые')}</span>
       </div>
       <ul className='faq__list'>
         {faq.map((item, i) =>{

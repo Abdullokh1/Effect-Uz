@@ -5,11 +5,13 @@ import right from '../../assets/images/right.svg'
 import weatherSun from '../../assets/images/weather-sun.svg'
 import feather from '../../assets/images/feather.svg'
 import gift from '../../assets/images/gift.svg'
-
+import {useTranslation} from "react-i18next";
 import Faq from './Faq/Faq'
 
 
 function Aside() {
+  const {t} = useTranslation();
+  
   return (
     <aside className='aside'>
       <ul className='aside__list'>
@@ -38,10 +40,10 @@ function Aside() {
       </div>
       <div className='aside__info'>
         <img className='me-2' src={feather} alt="feather"/>
-        <span>Mobil muhbirga aylaning!</span>
+        <span>{t('Станьте мобильным репортером!')}</span>
         <div className='d-flex align-items-center mt-2'>
-          <p>Masofadan bizning muhbirga aylaning !</p>
-          <button>Batafsil</button>
+          <p>{t('Станьте нашим корреспондентом на расстоянии!')}</p>
+          <button>{t('Подробный')}</button>
         </div>
       </div>
 

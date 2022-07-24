@@ -2,10 +2,12 @@ import React from 'react'
 import './NewsCards.scss'
 import calendar from '../../../assets/images/calendar.svg'
 import pubg from '../../../assets/images/pubg.png'
+import {useTranslation} from "react-i18next";
 
 
 
 function NewsCards() {
+  const {t} = useTranslation();
   const cards = [,,,]
 
   return (
@@ -31,7 +33,7 @@ function NewsCards() {
         })}
       </ul>
       <div className='text-center'>
-        <button className='news-cards__btn'>Barcha yangiliklar</button>
+        <button className='news-cards__btn'>{t('Все новости')}</button>
       </div>
     </div>
   )

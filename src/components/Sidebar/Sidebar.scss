@@ -1,6 +1,5 @@
 .sidebar{
    min-height: 100vh;
-  
 }
 
 .sidebar__list{
@@ -12,12 +11,13 @@
       cursor: pointer;
       width: 243px;
 
-      i{
-         font-size: 20px;
+      svg{
+         stroke: #333;
          margin-right: 22px;
       }
 
-      svg{
+      i{
+         font-size: 20px;
          margin-right: 22px;
       }
    }
@@ -41,7 +41,7 @@
    position: relative;
 
    svg{
-      stroke: #2f9ff8;
+      stroke: #2f9ff8 !important;
    }
 
    i{
@@ -71,10 +71,6 @@
 
 .static-link{
    color: #072d4b;
-
-   svg{
-      stroke: #333;
-   }
    
    &:hover{
       color: #072d4b;
@@ -106,7 +102,6 @@
    border: none;
    width: 180px;
    background-color: transparent;
-
 }
 
 .accordion-body{
@@ -136,4 +131,9 @@
          width: 20px;
       }
    }
+}
+
+.accordion-button:not(.collapsed){
+   background-color: transparent;
+   box-shadow: none;
 }

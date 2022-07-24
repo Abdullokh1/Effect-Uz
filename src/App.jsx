@@ -5,6 +5,9 @@ import Aside from './components/Aside/Aside'
 import Header from './components/Header/Header'
 import Advertisement from './components/Advertisement/Advertisement'
 import Footer from './components/Footer/Footer'
+import { Routes, Route } from "react-router-dom";
+import News from './components/Navbar/News/News'
+
 
 function App() {
 
@@ -17,15 +20,18 @@ function App() {
             <Sidebar/>
           </div>
           <div className='col-7'>
-            <Navbar/>
+            <Routes>
+              <Route path='/' element={<Navbar/>}/>
+              <Route path='/News' element={<News/>}/>
+            </Routes>
           </div>
           <div className='col-2'>
             <Aside/>
           </div>
         </div>
-      </div>
         <Advertisement/>
         <Footer/>
+      </div>
     </>
   )
 }
