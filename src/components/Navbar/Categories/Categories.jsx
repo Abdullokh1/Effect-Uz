@@ -1,29 +1,42 @@
-import React from 'react'
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick';
+import React, { useEffect, useState } from 'react'
+import './Categories.scss'
+import API from '../../../API/API';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+
 
 function Categories() {
-  const categories = ['Barchasi', 'Texnika', 'Siyosat', 'Jamiyat', 'Sport', 'Iqtisod', 'Ilm-fan', 'Turizm']
-  const settings = {
-    infinite: true,
-    slidesToScroll: 1,
-    slidesToShow: 7,
-    speed: 500,
-    autoplay: true,
+
+  const [category, setCategory] = useState([])
+  const [move, setMove] = useState(0)
+
+  const getData = async () =>{
+    try{
+      const category = await API.category();
+      setCategory(category.data)
+
+    }catch(err){
+      console.error(err);
+      return;
+    }
   }
+
+  useEffect(() =>{
+    getData()
+  },[])
+
 
   return (
     <ul className='info__list'>
-    <Slider {...settings}>
-      {categories.map((item, i) =>{
-        return (
-          <li key={i}>
-            <button>{item}</button>
-          </li>
-        )
-      })}
-    </Slider>
+      <Swiper navigation={true} modules={[Navigation]} slidesPerView={7} spaceBetween={10} className="mySwiper">
+        {category.map((item) =>{
+          return (
+            <SwiperSlide key={item.id} className='category-items'>{item.name_ru}</SwiperSlide>
+          )
+        })}
+      </Swiper>
   </ul>
   )
 }

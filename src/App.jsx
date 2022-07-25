@@ -7,9 +7,71 @@ import Advertisement from './components/Advertisement/Advertisement'
 import Footer from './components/Footer/Footer'
 import { Routes, Route } from "react-router-dom";
 import News from './components/Navbar/News/News'
+import { useEffect, useState } from 'react'
+import API from './API/API'
 
 
 function App() {
+
+  // const [provence, setProvence] = useState([])
+
+  // const useAuth = async () =>{
+  //   try{
+  //     const provence = await API.provence();
+  //     setProvence(provence.data)
+
+  //   }catch(err){
+  //     console.error(err);
+  //     return;
+  //   }
+  // }
+
+  // useEffect(() =>{
+  //   useAuth()
+  // },[])
+
+  // console.log(provence);
+
+
+
+  // const [config, setConfig] = useState([])
+
+  // const useAuth = async () =>{
+  //   try{
+  //     const config = await API.config();
+  //     setConfig(config.data)
+
+  //   }catch(err){
+  //     console.error(err);
+  //     return;
+  //   }
+  // }
+
+  // useEffect(() =>{
+  //   useAuth()
+  // },[])
+
+  // console.log(config);
+
+  
+
+  const [newsAll, setNewsAll] = useState([])
+
+  const useAuth = async () =>{
+    try{
+      const newsAll = await API.newsAll();
+      setNewsAll(newsAll.data.items)
+
+    }catch(err){
+      console.error(err);
+      return;
+    }
+  }
+
+  useEffect(() =>{
+    useAuth()
+  },[])
+
 
   return (
     <>

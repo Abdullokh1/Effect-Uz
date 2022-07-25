@@ -12,22 +12,6 @@
 
 .info__list{
   margin-bottom: 24px;
-  
-  button{
-    border: none;
-    background-color: #fff;
-    padding: 6px 16px;
-    border: 0.2px solid #fff;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
-    border-radius: 20px;
-    font-size: 15px;
-    transition: all 0.3s ease;
-
-    &:hover{
-      background-color: #2f9ff8;
-      color: #fff;
-    }
-  }
 }
 
 .slick-arrow{

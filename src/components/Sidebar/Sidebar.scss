@@ -40,7 +40,7 @@
    display: inline-block;
    position: relative;
 
-   svg{
+   .svg-color{
       stroke: #2f9ff8 !important;
    }
 
@@ -49,10 +49,10 @@
    }
 
    button{
-      color: #222 !important;
+      color: blue !important;
    }
 
-   &::before{
+   &:not(:nth-child(3), :last-child):before{
       content: "";
       position: absolute;
       left: 15px;
@@ -82,7 +82,7 @@
    background-color: transparent;
    padding: 0;
    width: 180px;
-   height: 40px;
+   height: 25px;
    border: 1px solid #F4F9f8;
    font-weight: 400;
    color: #333;
@@ -97,6 +97,8 @@
       border: none;
    }
 }
+
+
 
 .accordion-item{
    border: none;
@@ -137,3 +139,5 @@
    background-color: transparent;
    box-shadow: none;
 }
+
+

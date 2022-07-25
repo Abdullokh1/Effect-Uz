@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Advert from './Advert/Advert'
 import InfoCards from './InfoCards/InfoCards'
 import './Navbar.scss'
@@ -7,18 +7,17 @@ import PhotoNews from './PhotoNews/PhotoNews'
 import VideoNews from './VideoNews/VideoNews'
 import {useTranslation} from "react-i18next";
 import Categories from './Categories/Categories'
+import { useCallback } from "react";
 
 
-
-function Navbar() {
+const  Navbar = () => {
   const {t} = useTranslation();
 
 
   return (
-
     <section className='info'>
       <h2 className='info__title'>{t('Последние новости')}</h2>
-
+      
       <Categories/>
       <InfoCards/>
       <Advert/>

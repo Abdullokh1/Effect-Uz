@@ -10,12 +10,20 @@
   gap: 15px;
   margin-top: 20px;
   margin-bottom: 15px;
+
   li{
     width: 40px;
     height: 40px;
     background: #D9D9D9;
     border-radius: 5px;
   }
+
+}
+
+.aside__weather-listWrapper{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .aside__weather{
@@ -61,9 +69,18 @@
   }
 }
 
+.aside__weather-list{
+  transition: all 0.4s ease;
+
+  li{
+    min-width: 255px;
+  }
+}
+
 .aside__inner{
   border-bottom: 1px solid #072e4b30;
   padding-bottom: 8px;
+  overflow: hidden;
 }
 
 .aside__temp{
@@ -155,5 +172,6 @@
     margin-bottom: 0;
     font-weight: 400;
   }
-
 }
+
+

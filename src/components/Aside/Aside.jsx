@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Aside.scss'
 import left from '../../assets/images/left.svg'
+import inactiveLeft from '../../assets/images/inactive-left.svg'
 import right from '../../assets/images/right.svg'
 import weatherSun from '../../assets/images/weather-sun.svg'
 import feather from '../../assets/images/feather.svg'
@@ -11,6 +12,9 @@ import Faq from './Faq/Faq'
 
 function Aside() {
   const {t} = useTranslation();
+  const [slide, setSlide] = useState(0)
+
+  console.log(slide);
   
   return (
     <aside className='aside'>
@@ -23,20 +27,41 @@ function Aside() {
       <div className='aside__weather'>
         <div className='aside__inner d-flex align-items-center'>
           <h5>Qashqadaryo, Qarshi</h5>
-          <button>
-             <img src={left} alt="left"/>
+          <button disabled={slide === 0 ? true : false}  onClick={() => setSlide(slide-1)}>
+             <img style={{opacity: slide <= 0 ? '0.3' : '1'}} src={left} alt="left"/>
           </button>
-          <button>
+          <button onClick={() => setSlide(slide+1)}>
             <img src={right} alt="right"/>
           </button>
         </div>
-        <div className='d-flex justify-content-between mt-2'>
-          <div>
-            <p>Quyoshli</p>
-            <span> <span className='aside__temp'>31</span> c / <span className='aside__temp'>25</span> c</span>
-          </div>
-          <img src={weatherSun} alt="sun"/>
-        </div>
+
+       <div className='aside__weather-listWrapper mt-2'>
+
+        <ul style={{transform: `translateX(-${slide * 255}px)`}} className='aside__weather-list d-flex'>
+          <li className='d-flex justify-content-between'>
+            <div>
+              <p>Quyoshli</p>
+              <span> <span className='aside__temp'>31</span> c / <span className='aside__temp'>25</span> c</span>
+            </div>
+            <img src={weatherSun} alt="sun"/>
+          </li>
+          <li className='d-flex justify-content-between'>
+            <div>
+              <p>Qor</p>
+              <span> <span className='aside__temp'>-22</span> c / <span className='aside__temp'>-5</span> c</span>
+            </div>
+            <img src={weatherSun} alt="sun"/>
+          </li>
+          <li className='d-flex justify-content-between'>
+            <div>
+              <p>Yomgir</p>
+              <span> <span className='aside__temp'>-22</span> c / <span className='aside__temp'>-5</span> c</span>
+            </div>
+            <img src={weatherSun} alt="sun"/>
+          </li>
+        </ul>
+
+       </div>
       </div>
       <div className='aside__info'>
         <img className='me-2' src={feather} alt="feather"/>
