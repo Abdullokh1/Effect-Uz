@@ -7,7 +7,6 @@ import PhotoNews from './PhotoNews/PhotoNews'
 import VideoNews from './VideoNews/VideoNews'
 import {useTranslation} from "react-i18next";
 import Categories from './Categories/Categories'
-import { useCallback } from "react";
 
 
 const  Navbar = () => {
@@ -15,8 +14,11 @@ const  Navbar = () => {
 
 
   return (
+
     <section className='info'>
       <h2 className='info__title'>{t('Последние новости')}</h2>
+
+      
       
       <Categories/>
       <InfoCards/>

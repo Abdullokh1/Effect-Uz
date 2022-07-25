@@ -10,7 +10,6 @@ import "swiper/css/navigation";
 function Categories() {
 
   const [category, setCategory] = useState([])
-  const [move, setMove] = useState(0)
 
   const getData = async () =>{
     try{
