@@ -14,16 +14,10 @@ import {useTranslation} from "react-i18next";
 function Header() {
   const {i18n} = useTranslation();
   let [isDark, setIsDark] = useState(false);
-  let [lang, setLang] = useState('')
 
-  useEffect(() =>{
-    switch(lang){
-      case 'uz':
-        i18n.changeLanguage(lang)
-      case 'ru':
-        i18n.changeLanguage(lang)
-    }
-  }, [lang])
+  const changeLanguage = (lang) =>{
+    i18n.changeLanguage(lang)
+  }
 
   return (
     <header className="header">
@@ -82,7 +76,7 @@ function Header() {
               <img src={moon} alt="moon" />
             </button>
           </div>
-          <select onChange={(e) => setLang(e.target.value)}>
+          <select onChange={(e) => changeLanguage(e.target.value)}>
             <option value="uz">O'zbek</option>
             <option value="ru">Русский</option>
           </select>

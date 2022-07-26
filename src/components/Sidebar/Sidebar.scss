@@ -10,6 +10,8 @@
       padding: 14px 35px;
       cursor: pointer;
       width: 243px;
+      border-radius: 0px 37px 37px 0px;
+      transition: all 0.4s ease;
 
       svg{
          stroke: #333;
@@ -36,9 +38,9 @@
 
 .active-link{
    background: rgba(47, 159, 248, 0.1);
-   border-radius: 0px 37px 37px 0px;
    display: inline-block;
    position: relative;
+   border-radius: 0px 37px 37px 0px;
 
    .svg-color{
       stroke: #2f9ff8 !important;
@@ -75,7 +77,6 @@
    &:hover{
       color: #072d4b;
    }
- 
 }
 
 .accordion-button{
@@ -97,8 +98,6 @@
       border: none;
    }
 }
-
-
 
 .accordion-item{
    border: none;
@@ -139,5 +138,3 @@
    background-color: transparent;
    box-shadow: none;
 }
-
-

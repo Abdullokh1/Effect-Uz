@@ -12,55 +12,19 @@ import API from './API/API'
 
 
 function App() {
-
-  // const [provence, setProvence] = useState([])
-
-  // const useAuth = async () =>{
-  //   try{
-  //     const provence = await API.provence();
-  //     setProvence(provence.data)
-
-  //   }catch(err){
-  //     console.error(err);
-  //     return;
-  //   }
-  // }
-
-  // useEffect(() =>{
-  //   useAuth()
-  // },[])
-
-  // console.log(provence);
-
-
-
-  // const [config, setConfig] = useState([])
-
-  // const useAuth = async () =>{
-  //   try{
-  //     const config = await API.config();
-  //     setConfig(config.data)
-
-  //   }catch(err){
-  //     console.error(err);
-  //     return;
-  //   }
-  // }
-
-  // useEffect(() =>{
-  //   useAuth()
-  // },[])
-
-  // console.log(config);
+  let [config, setConfig] = useState([])
+  let [newsAll, setNewsAll] = useState([])
+  let [provence, setProvence] = useState([])
 
   
-
-  const [newsAll, setNewsAll] = useState([])
-
   const useAuth = async () =>{
     try{
+      const config = await API.config();
       const newsAll = await API.newsAll();
-      setNewsAll(newsAll.data.items)
+      const provence = await API.provence();
+      setConfig(config.data)
+      setNewsAll(newsAll.data)
+      setProvence(provence.data)
 
     }catch(err){
       console.error(err);
@@ -72,6 +36,10 @@ function App() {
     useAuth()
   },[])
 
+  console.log(newsAll);
+
+
+ 
 
   return (
     <>

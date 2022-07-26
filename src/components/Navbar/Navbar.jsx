@@ -1,4 +1,3 @@
-import React, { useMemo } from 'react'
 import Advert from './Advert/Advert'
 import InfoCards from './InfoCards/InfoCards'
 import './Navbar.scss'
@@ -12,14 +11,13 @@ import Categories from './Categories/Categories'
 const  Navbar = () => {
   const {t} = useTranslation();
 
-
   return (
 
     <section className='info'>
       <h2 className='info__title'>{t('Последние новости')}</h2>
 
       
-      
+     
       <Categories/>
       <InfoCards/>
       <Advert/>
