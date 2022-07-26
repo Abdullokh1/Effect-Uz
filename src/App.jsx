@@ -15,6 +15,8 @@ function App() {
   let [config, setConfig] = useState([])
   let [newsAll, setNewsAll] = useState([])
   let [provence, setProvence] = useState([])
+  let [newsEnd, setNewsEnd] = useState([])
+
 
   
   const useAuth = async () =>{
@@ -22,9 +24,11 @@ function App() {
       const config = await API.config();
       const newsAll = await API.newsAll();
       const provence = await API.provence();
+      const newsEnd = await API.newsEnd(3)
       setConfig(config.data)
       setNewsAll(newsAll.data)
       setProvence(provence.data)
+      setNewsEnd(newsEnd.data)
 
     }catch(err){
       console.error(err);
@@ -36,10 +40,10 @@ function App() {
     useAuth()
   },[])
 
-  console.log(newsAll);
+  console.log(newsEnd);
 
 
- 
+  
 
   return (
     <>

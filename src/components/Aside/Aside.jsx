@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './Aside.scss'
 import left from '../../assets/images/left.svg'
-import inactiveLeft from '../../assets/images/inactive-left.svg'
 import right from '../../assets/images/right.svg'
 import weatherSun from '../../assets/images/weather-sun.svg'
 import feather from '../../assets/images/feather.svg'
@@ -14,8 +13,6 @@ function Aside() {
   const {t} = useTranslation();
   const [slide, setSlide] = useState(0)
 
-  console.log(slide);
-  
   return (
     <aside className='aside'>
       <ul className='aside__list'>

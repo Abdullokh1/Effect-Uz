@@ -12,7 +12,7 @@ import {useTranslation} from "react-i18next";
 
 
 function Header() {
-  const {i18n} = useTranslation();
+  const {t, i18n} = useTranslation();
   let [isDark, setIsDark] = useState(false);
 
   const changeLanguage = (lang) =>{
@@ -33,7 +33,7 @@ function Header() {
           <div className="header__input-wrapper">
             <input
               className="header__input"
-              placeholder="Sayt bo’ylab izlash"
+              placeholder={t('поиск по всему сайту')}
               type="text"
             />
             <i className="bx bx-search"></i>

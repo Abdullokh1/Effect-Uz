@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const token = 'lBpeoD0AT6-_tK3f4UqyENRg9bnNCyUlBHtYfvTpdLvTXqFRWO';
+const token = '434gW_nyNC_BsHlO3HO8OQP9aoFBNSY0rLCG602CEgWpz271Dk';
 
 const headers = {
    headers: {
@@ -21,6 +21,8 @@ const PROVENCE_URL = "https://simply.uz/api/provence";
 const CONFIG_URL = "https://simply.uz/api/config";
 const NEWS_ALL = "https://simply.uz/api/news-all";
 const NEWS_ITEM_URL = "https://simply.uz/api/new?id";
+const NEWS_END = "https://simply.uz/api/news-end?count";
+
 
 
 const API = {
@@ -36,6 +38,9 @@ const API = {
   newsAll: () => axios.get(NEWS_ALL, headers),
 
   newsItem: (ID) => axios.get(`${NEWS_ITEM_URL}=${ID}`, headers),
+
+  newsEnd: (num) => axios.post(`${NEWS_END}=${num}`, headers),
+
 
 }
 
