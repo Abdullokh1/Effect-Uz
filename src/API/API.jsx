@@ -15,13 +15,26 @@ const params = {
    password: 'apiapiapi'
 }
 
+// GET 
+
 const LOGIN_URL = "https://simply.uz/api/login";
 const CATEGORY_URL = "https://simply.uz/api/category";
 const PROVENCE_URL = "https://simply.uz/api/provence";
 const CONFIG_URL = "https://simply.uz/api/config";
 const NEWS_ALL = "https://simply.uz/api/news-all";
 const NEWS_ITEM_URL = "https://simply.uz/api/new?id";
+
+// POST 
+
 const NEWS_END = "https://simply.uz/api/news-end?count";
+const COME_URL = "https://simply.uz/api/come";
+const COMMENT_URL = "https://simply.uz/api/comment";
+const ADVERT_URL = "https://simply.uz/api/advert";
+const RECEPTIONS_URL = "https://simply.uz/api/reception";
+const STAR_URL = "https://simply.uz/api/star";
+
+
+
 
 
 
@@ -39,7 +52,7 @@ const API = {
 
   newsItem: (ID) => axios.get(`${NEWS_ITEM_URL}=${ID}`, headers),
 
-  newsEnd: (num) => axios.post(`${NEWS_END}=${num}`, headers),
+  newsEnd: (params) => axios.post(`${NEWS_END}`, params, headers),
 
 
 }

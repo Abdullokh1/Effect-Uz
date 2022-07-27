@@ -18,6 +18,12 @@
 
 .faq__list{
   li{
+    transition: all 0.3s ease;
+
+    &:hover{
+      color: #2f9ff8;
+      cursor: pointer;
+    }
     &:not(:last-child){
       margin-bottom: 10px;
       border-bottom: 0.2px solid #072e4b50;

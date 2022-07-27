@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import News from './components/Navbar/News/News'
 import { useEffect, useState } from 'react'
 import API from './API/API'
+import AboutNews from './components/Navbar/AboutNews/AboutNews'
 
 
 function App() {
@@ -40,10 +41,7 @@ function App() {
     useAuth()
   },[])
 
-  console.log(newsEnd);
 
-
-  
 
   return (
     <>
@@ -57,6 +55,8 @@ function App() {
             <Routes>
               <Route path='/' element={<Navbar/>}/>
               <Route path='/News' element={<News/>}/>
+              <Route path='/AboutNews/:id' element={<AboutNews/>}/>
+
             </Routes>
           </div>
           <div className='col-2'>

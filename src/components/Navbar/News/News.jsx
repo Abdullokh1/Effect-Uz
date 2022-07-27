@@ -5,6 +5,7 @@ import cardClock from "../../../assets/images/card-clock.svg";
 import { useTranslation } from "react-i18next";
 import Categories from "../Categories/Categories";
 
+
 function News() {
   const newsCard = ["", "", "", ""];
   const { t } = useTranslation();
@@ -19,6 +20,7 @@ function News() {
           <p className="news__time m-0">22.07.2022</p>
           <span className="news__right"></span>
         </div>
+
         <ul className="news__list">
           {newsCard.map((_, i) => {
             return (
@@ -33,7 +35,7 @@ function News() {
                 <div>
                   <h4>
                     Card hover bo’lganda title color o’zgarishi va card
-                    box-shadow ham o’zgarmoqda
+                    box-shadow ham o’zgarmoqda  
                   </h4>
                   <p className="m-0">#Ilm-fan</p>
                 </div>
