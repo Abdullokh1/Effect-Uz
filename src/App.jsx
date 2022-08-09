@@ -7,41 +7,10 @@ import Advertisement from './components/Advertisement/Advertisement'
 import Footer from './components/Footer/Footer'
 import { Routes, Route } from "react-router-dom";
 import News from './components/Navbar/News/News'
-import { useEffect, useState } from 'react'
-import API from './API/API'
 import AboutNews from './components/Navbar/AboutNews/AboutNews'
 
 
 function App() {
-  let [config, setConfig] = useState([])
-  let [newsAll, setNewsAll] = useState([])
-  let [provence, setProvence] = useState([])
-  let [newsEnd, setNewsEnd] = useState([])
-
-
-  
-  const useAuth = async () =>{
-    try{
-      const config = await API.config();
-      const newsAll = await API.newsAll();
-      const provence = await API.provence();
-      const newsEnd = await API.newsEnd(3)
-      setConfig(config.data)
-      setNewsAll(newsAll.data)
-      setProvence(provence.data)
-      setNewsEnd(newsEnd.data)
-
-    }catch(err){
-      console.error(err);
-      return;
-    }
-  }
-
-  useEffect(() =>{
-    useAuth()
-  },[])
-
-
 
   return (
     <>
@@ -56,7 +25,6 @@ function App() {
               <Route path='/' element={<Navbar/>}/>
               <Route path='/News' element={<News/>}/>
               <Route path='/AboutNews/:id' element={<AboutNews/>}/>
-
             </Routes>
           </div>
           <div className='col-2'>
