@@ -42,7 +42,6 @@ function Aside() {
             <img src={right} alt="right" />
           </button>
         </div>
-
         <div className="aside__weather-listWrapper mt-2">
           <ul
             style={{ transform: `translateX(-${slide * 255}px)` }}
@@ -73,9 +72,7 @@ function Aside() {
           <button>{t("Подробный")}</button>
         </div>
       </div>
-
       <Faq />
-
       <div className="aside__advert">
         <div className="aside__advert-inner d-flex align-items-center justify-content-end mb-2">
           <img src={gift} alt="gift" />
