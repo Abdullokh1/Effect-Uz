@@ -23,7 +23,7 @@ function NewsCardItems({ item }) {
             )}
           </div>
         </div>
-        <img src={item.default_img} alt="pubg" />
+        <img src={pubg} alt="pubg" />
       </div>
     </li>
   );
