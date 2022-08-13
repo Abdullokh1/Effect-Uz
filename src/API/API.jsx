@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const token = '434gW_nyNC_BsHlO3HO8OQP9aoFBNSY0rLCG602CEgWpz271Dk';
+const token = 'LAEQ2GUBlv8tmxCdFRvq0NhiQrGgBJlEGifjvBz4e0ZHeJZ6Dg';
 
 const headers = {
    headers: {

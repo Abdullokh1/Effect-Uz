@@ -32,6 +32,7 @@ function AboutNews() {
             return (
               <li key={item.id}>
                 <h4 className='about__title'>{item.title_uz}</h4>
+                <img className='about__img' src={item.default_img} alt={item.title}  />
               </li>
             )
           }

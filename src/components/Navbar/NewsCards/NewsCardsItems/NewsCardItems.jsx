@@ -4,6 +4,7 @@ import pubg from "../../../../assets/images/pubg.png";
 import comment from "../../../../assets/images/comment.svg";
 
 function NewsCardItems({ item }) {
+  console.log(item);
   return (
     <li>
       <p className="m-0">{item.category_id}</p>
@@ -13,16 +14,16 @@ function NewsCardItems({ item }) {
           <div className="news-cards__time d-flex justify-content-end pe-3">
             <img src={calendar} alt="calendar" />
             <span className="ms-2">{item.created_date}</span>
-            {item.comments.length === 0 ? (
+            {item.comment_count === 0 ? (
               ""
             ) : (
               <span className="ms-3 comment">
-                <img src={comment} alt="comment" /> {item.comments.length} Izoh
+                <img src={comment} alt="comment" /> {item.comment_count} Izoh
               </span>
             )}
           </div>
         </div>
-        <img src={pubg} alt="pubg" />
+        <img src={item.default_img} alt="pubg" />
       </div>
     </li>
   );
